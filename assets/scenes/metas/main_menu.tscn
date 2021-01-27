@@ -1,0 +1,118 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/ui/fonts/dynamic_fonts/64.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/textures/64x64_transparent.png" type="Texture" id=2]
+[ext_resource path="res://assets/scripts/start_game_button.gd" type="Script" id=3]
+[ext_resource path="res://assets/scripts/options_button.gd" type="Script" id=4]
+[ext_resource path="res://assets/scripts/quit_button.gd" type="Script" id=5]
+[ext_resource path="res://assets/scenes/subscenes/general_scene_elements/general_scene_elements.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/ui/fonts/dynamic_fonts/112.tres" type="DynamicFont" id=7]
+[ext_resource path="res://temp/temp.gd" type="Script" id=8]
+
+[node name="MainMenu" type="Spatial"]
+pause_mode = 2
+
+[node name="GeneralSceneElements" parent="." instance=ExtResource( 6 )]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 4 )
+fov = 90.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+anchor_left = 0.067
+anchor_top = 0.119
+anchor_right = 0.067
+anchor_bottom = 0.119
+margin_left = -0.639999
+margin_top = -0.520004
+margin_right = 529.36
+margin_bottom = 50.48
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0.5, 0.5, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "3D Project"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenuOptionsContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchor_left = 0.067
+anchor_top = 0.593
+anchor_right = 0.067
+anchor_bottom = 0.593
+margin_left = -0.880001
+margin_top = -0.639984
+margin_right = 237.12
+margin_bottom = 199.36
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartGameButton" type="TextureButton" parent="CanvasLayer/MainMenuOptionsContainer"]
+margin_right = 238.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Text" type="Label" parent="CanvasLayer/MainMenuOptionsContainer/StartGameButton"]
+margin_right = 240.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 1 )
+text = "START GAME"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsButton" type="TextureButton" parent="CanvasLayer/MainMenuOptionsContainer"]
+margin_top = 68.0
+margin_right = 238.0
+margin_bottom = 132.0
+texture_normal = ExtResource( 2 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="CanvasLayer/MainMenuOptionsContainer/OptionsButton"]
+custom_fonts/font = ExtResource( 1 )
+text = "OPTIONS"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="TextureButton" parent="CanvasLayer/MainMenuOptionsContainer"]
+margin_top = 136.0
+margin_right = 238.0
+margin_bottom = 200.0
+texture_normal = ExtResource( 2 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="CanvasLayer/MainMenuOptionsContainer/QuitButton"]
+custom_fonts/font = ExtResource( 1 )
+text = "QUIT"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CanvasLayer/MainMenuOptionsContainer/StartGameButton" to="CanvasLayer/MainMenuOptionsContainer/StartGameButton" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenuOptionsContainer/OptionsButton" to="CanvasLayer/MainMenuOptionsContainer/OptionsButton" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenuOptionsContainer/QuitButton" to="CanvasLayer/MainMenuOptionsContainer/QuitButton" method="_on_QuitButton_pressed"]

@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/textures/2x2_black_half_transparent.png" type="Texture" id=1]
+[ext_resource path="res://assets/textures/64x64_transparent.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/fonts/dynamic_fonts/64.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/scripts/quit_texture_button.gd" type="Script" id=4]
+[ext_resource path="res://assets/scripts/pause_menu.gd" type="Script" id=5]
+[ext_resource path="res://assets/scenes/subscenes/options_menu_ui/options_menu_ui.tscn" type="PackedScene" id=6]
+
+[node name="PauseMenu" type="CanvasLayer"]
+pause_mode = 2
+layer = 2
+script = ExtResource( 5 )
+
+[node name="BackTextureRect" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_vertical = 3
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PausePanel" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = -472.0
+margin_bottom = -260.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PausePanel"]
+anchor_left = 12.8
+anchor_top = 7.5
+anchor_right = 12.8
+anchor_bottom = 7.5
+margin_left = -120.0
+margin_top = -100.0
+margin_right = 120.0
+margin_bottom = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContinueTextureButton" type="TextureButton" parent="PausePanel/VBoxContainer"]
+margin_right = 240.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 2 )
+
+[node name="ContinueLabel" type="Label" parent="PausePanel/VBoxContainer/ContinueTextureButton"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 3 )
+text = " Continue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsTextureButton" type="TextureButton" parent="PausePanel/VBoxContainer"]
+margin_top = 68.0
+margin_right = 240.0
+margin_bottom = 132.0
+texture_normal = ExtResource( 2 )
+
+[node name="OptionsLabel" type="Label" parent="PausePanel/VBoxContainer/OptionsTextureButton"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 3 )
+text = " Options"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitTextureButton" type="TextureButton" parent="PausePanel/VBoxContainer"]
+margin_top = 136.0
+margin_right = 240.0
+margin_bottom = 200.0
+texture_normal = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="QuitLabel" type="Label" parent="PausePanel/VBoxContainer/QuitTextureButton"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 3 )
+text = " Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsMenuContainer" parent="." instance=ExtResource( 6 )]
+visible = false
+options_menu_type = 1
+[connection signal="pressed" from="PausePanel/VBoxContainer/ContinueTextureButton" to="." method="_on_ContinueTextureButton_pressed"]
+[connection signal="pressed" from="PausePanel/VBoxContainer/OptionsTextureButton" to="." method="_on_OptionsTextureButton_pressed"]
+[connection signal="pressed" from="PausePanel/VBoxContainer/QuitTextureButton" to="PausePanel/VBoxContainer/QuitTextureButton" method="_on_TextureButton_pressed"]
+[connection signal="pause_menu_requested" from="OptionsMenuContainer" to="." method="_on_OptionsMenuContainer_pause_menu_requested"]

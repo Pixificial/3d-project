@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/scenes/subscenes/unit_csg_box/unit_csg_box_material.tres" type="Material" id=1]
+
+[node name="UnitCSGBox" type="CSGBox"]
+use_collision = true
+width = 1.0
+height = 1.0
+depth = 1.0
+material = ExtResource( 1 )

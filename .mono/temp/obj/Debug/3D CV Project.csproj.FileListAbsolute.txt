@@ -1,0 +1,8 @@
+D:\Users\Connor\Documents\Godot Engine\3D CV Project\.mono\temp\obj\Debug\3D CV Project.csprojAssemblyReference.cache
+D:\Users\Connor\Documents\Godot Engine\3D CV Project\.mono\temp\obj\Debug\3D CV Project.AssemblyInfoInputs.cache
+D:\Users\Connor\Documents\Godot Engine\3D CV Project\.mono\temp\obj\Debug\3D CV Project.AssemblyInfo.cs
+D:\Users\Connor\Documents\Godot Engine\3D CV Project\.mono\temp\obj\Debug\3D CV Project.csproj.CoreCompileInputs.cache
+D:\Users\Connor\Documents\Godot Engine\3D CV Project\.mono\temp\bin\Debug\3D CV Project.dll
+D:\Users\Connor\Documents\Godot Engine\3D CV Project\.mono\temp\bin\Debug\3D CV Project.pdb
+D:\Users\Connor\Documents\Godot Engine\3D CV Project\.mono\temp\obj\Debug\3D CV Project.dll
+D:\Users\Connor\Documents\Godot Engine\3D CV Project\.mono\temp\obj\Debug\3D CV Project.pdb

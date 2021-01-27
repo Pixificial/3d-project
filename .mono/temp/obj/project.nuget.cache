@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "uhUzj3DURRKLvDZDiaopzOUe5WtJhDIotTIBCa0taRcgNIJV2Uj3BMSK1U3KxA7oF5C5PqIhGsC+qKnDJCHi4g==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\Connor\\Documents\\Godot Engine\\3D CV Project\\3D CV Project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Connor\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\Connor\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.0\\microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

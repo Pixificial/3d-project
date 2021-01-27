@@ -1,0 +1,50 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Users\\Connor\\Documents\\Godot Engine\\3D CV Project\\3D CV Project.csproj": {}
+  },
+  "projects": {
+    "D:\\Users\\Connor\\Documents\\Godot Engine\\3D CV Project\\3D CV Project.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\Connor\\Documents\\Godot Engine\\3D CV Project\\3D CV Project.csproj",
+        "projectName": "3D CV Project",
+        "projectPath": "D:\\Users\\Connor\\Documents\\Godot Engine\\3D CV Project\\3D CV Project.csproj",
+        "packagesPath": "C:\\Users\\Connor\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\Connor\\Documents\\Godot Engine\\3D CV Project\\.mono\\temp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Connor\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "target": "Package",
+              "version": "[1.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
