@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/ui/fonts/dynamic_fonts/64.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/textures/64x64_transparent.png" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://assets/scripts/quit_button.gd" type="Script" id=5]
 [ext_resource path="res://assets/scenes/subscenes/general_scene_elements/general_scene_elements.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui/fonts/dynamic_fonts/112.tres" type="DynamicFont" id=7]
-[ext_resource path="res://temp/temp.gd" type="Script" id=8]
 
 [node name="MainMenu" type="Spatial"]
 pause_mode = 2
@@ -101,15 +100,6 @@ __meta__ = {
 custom_fonts/font = ExtResource( 1 )
 text = "QUIT"
 uppercase = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

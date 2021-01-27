@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/box_mesh.png-6057f4517a9d03140057b96669a776db.stex"
+path="res://.import/100x100_default_texture.png-5f5e75cc428640175719807060a5c8fc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/scenes/subscenes/unit_cube/box_mesh.png"
-dest_files=[ "res://.import/box_mesh.png-6057f4517a9d03140057b96669a776db.stex" ]
+source_file="res://assets/textures/100x100_default_texture.png"
+dest_files=[ "res://.import/100x100_default_texture.png-5f5e75cc428640175719807060a5c8fc.stex" ]
 
 [params]
 
